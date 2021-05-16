@@ -167,9 +167,6 @@ app.config['MAIL_USE_SSL'] = True
 
 mail = Mail(app)
 
-#@app.route('/')
-#def index():
-#    return render_template('index.html')
 @app.route('/report')
 def report():
     return (render_template('report.html'))
@@ -210,15 +207,8 @@ def result():
         term = 1
             
     final_amount=(installment*terms)-loan_amnt
-    #final_amount=int(final_amount)
-    #c=np.array([7,45000,17500,17.27,21.31,8747.88,0,1,1,0]).reshape(1,-1)
-    #c=np.array([5,30000,12500,17.27,13.16,6248.48,2,1,1,0]).reshape(1,-1)
     
     features=np.array([emp,annual_inc,loan_amnt,interest_rate1,dti,final_amount,home_ownership_cat,term]).reshape(1,-1)
-    #features=[7,45000,17500,17.27,21.31,8747.88,0,1,1,0]
-    #prediction = model.predict()
-    #v=(emp,annual_inc,loan_amnt,interest_rate,dti,final_amount,home_ownership_cat,income,term,interest_payments)
-    #bhav=[np.array(list(v))]
     pre = model.predict(features)
     if dti>43:
         res="Dept to income is too high, loan cannot be approved"    
@@ -240,8 +230,6 @@ def result():
     return render_template("result.html",success=success)
 
         
-    #return (render_template('result.html',emp=emp,annual_inc=annual_inc,loan_amnt=loan_amnt,interest_rate=interest_rate1,dti=dti,final_amount=final_amount,home_ownership_cat=home_ownership_cat,income=income,term=term,interest_payments=interest_payments))
-    #return (render_template('output.html',res=res))
     
 
 
