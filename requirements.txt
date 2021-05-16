@@ -5,7 +5,7 @@ Flask_PyMongo==2.3.0
 numpy==1.20.3
 pymongo==3.11.4
 Flask_Mail==0.9.1
-bcrypt==0.3.2
+bcrypt
 xgboost
 dnspython
 sklearn
