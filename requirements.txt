@@ -1,4 +1,4 @@
-python==3.9.2
+
 pandas==1.2.4
 Flask==2.0.0
 Flask_PyMongo==2.3.0
