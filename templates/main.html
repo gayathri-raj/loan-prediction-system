@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%extends "layout.html" %}
+  {%block content%}
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .jumbotron {  background-color:  #e6f2ff;}
+    .btn {background-color: #228B22	;}
+    </style>
+
+
+</head>
+<body style="background-color:   #ccf2ff  ;">
+    <div class="jumbotron"  >
+        <h1 class="text-primary">Bank Loan Prediction System</h1>
+        <p class="text-muted">This website helps user to know if one is eligible for bank loan or not.</p>
+        <hr class="my-4">
+        <p></p>
+        <p class="lead">
+                 </p>
+        <p></p>
+      </div>
+      
+    
+
+<div class="container"  >
+  <div class="jumbotron">
+    <h1 class=text-info>For users</h1>      
+    <p class=text-muted>Click down below to login</p>
+  </div>
+  <p> <a class="btn btn-primary btn-lg" href="{{url_for('login')}}" role="button" class=text-info>Login Here</a>  </p>      
+  <p></p>      
+</div>
+<div class="container" >
+    <div class="jumbotron">
+      <h1 class=text-info>For managers</h1>      
+      <p class=text-muted>Click down below to login</p>
+    </div>
+    <p> <a class="btn btn-primary btn-lg" href="{{url_for('login1')}}" role="button">Login Here</a>  </p>      
+    <p></p>      
+  </div>
+  
+{%endblock%}
+
+</body>
+</html>

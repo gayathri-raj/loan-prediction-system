@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Form  </title>
+    
+    {%extends "layout.html" %}
+    {%block content%}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/master1.css') }}">
+    <style>
+      .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+    </style>
+  </head>
+  <body>
+       <div class="login-box">
+      <img src="{{ url_for('static',filename='img/logo2.png') }}" class="avatar" >
+      <h1>Login Here</h1>
+      <form action="#" method="POST">
+        <!-- USERNAME INPUT -->
+        Username
+        <input type="text" name="nm" placeholder="Enter Username" required> 
+        <!-- PASSWORD INPUT -->
+        Password
+        <input type="password" name="ps" placeholder="Enter Password" required>
+        <input type="submit" value="Log In">
+        <p style="font-size: 20px;"><a href="{{url_for('register')}}">Don't have An account?</a></p><br><br>
+      
+        <p style="color:red">*This login page is for "managers" only.*</p>
+        {% if s %}
+        <div class="alert">
+          <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+          Invalid username/password combination.Try again!        </div>
+          {%else%}
+
+          {%endif%}
+        {%endblock%}
+      </form>
+    </div>
+    
+
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>About page </title>
+    
+    {%extends "layout1.html" %}
+    {%block content%}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <style>
+        .jumbotron {  background-color:  #e6f2ff;}
+        .container{ background-color:  #e6f2ff;}
+        .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+ 
+
+        </style>
+    
+  </head>
+  <body style="background-color:   #ccf2ff  ;">
+    <div class="container">
+           <div class="jumbotron"  >
+        <h1 class="text-muted" style="font-size: 40px;" >About this project</h1>
+<br>
+        <p class="text-info" style="font-size: 20px; text-align: justify; text-justify: inter-word;">With the enhancement in the banking sector, lots of people are applying for bank loans. But the bank has its limited assets which has to be granted to limited people only.
+            Thus, finding out to whom the loan can be granted and which will be a safer option for the bank is a typical process.
+             In this project, we try to reduce this risk factor behind selecting the safe person to save bank efforts and assets.
+            </p>
+            <hr class="my-4">
+            <br>
+            <br>
+            <img src="{{ url_for('static',filename='img/l.png') }} " alt="Girl in a jacket" class="center"></img>
+
+      <br>
+      <br>
+      <br>
+    
+        <p class="text-info" id='pleft' style="max-width:20em;float:left;font-size: 20px;  text-align: justify; text-justify: inter-word;">The loan is one of the most important products of the banking. All the banks are trying to figure out effective business strategies to persuade customers to apply their loans. However, there are some customers behave negatively after their application are approved. To prevent this situation, banks have to find some methods to predict customers’ behaviours. Machine learning algorithms have a pretty good performance on this purpose, which are widely-used by the banking. Here, we will work on loan behaviours prediction using machine learning models.
+        </p>
+  
+    
+        <p class="text-info" id='pright' style="max-width:20em;float:right;font-size: 20px; text-align: justify; text-justify: inter-word;">In this hands-on project, we will build and train a simple model to predict the approval of personal loan for a person based on features like age, experience, income, locations, family, education, exiting mortgage, credit card etc.
+        </p>
+       
+    </div>
+ 
+</div>
+
+
+        {%endblock%}
+     
+    
+  </body>
+</html>

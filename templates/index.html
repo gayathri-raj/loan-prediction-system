@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ONLINE FORM FOR LOAN PREDICTION</title>
+    {%extends "layout1.html" %}
+    {%block content%}
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/result" method="POST">
+        <div class="banner">
+          <h1 style="color: dimgrey ;font-size: 30px;" >ONLINE FORM FOR LOAN PREDICTION</h1>
+        </div>
+        <div class="item">
+          <p>Name</p>
+          <div class="name-item">
+            <input type="text" name="First" placeholder="First Name" required/>
+            <input type="text" name="Last" placeholder="Last Name" required />
+          </div>
+           </div>
+        	<div class="item">
+          <p>Email:</p>
+          <input type="text" min="0" name="email" id="email"placeholder="mail id" required/>
+        </div>
+	<div class="item">
+          <p>Phone Number</p>
+          <input type="number" min="0" name="conact number" placeholder="contact number" required/>
+        </div>
+	<div class="item">
+          <p>Address:</p>
+          <input type="text"  name="local Address" placeholder="local Address" required/>
+        </div>
+        
+	<div class="item">
+          <p>Employment</p>
+          <input type="number"  name="emp" id="emp" placeholder="Employment in years" step=0.01 required/>
+        </div>
+	 <div class="item">
+          <p>Home_Ownership</p>
+          <div class="Ownership_Cat">
+            <select name="home" id="home" required>
+              <option value="select a value" selected>Select a value</option>
+              <option value="MORTGAGE" >MORTGAGE</option>
+              <option value="RENT">RENT</option>
+              <option value="OWN">OWN</option>
+            </select>
+          </div>
+        </div>
+	 
+<div class="item">
+          <p>Annual_Income:</p>
+          <input type="text"  name="Annual_Income" id="Annual_Income" placeholder="Annual income" step=0.01 required/>
+        </div>
+    <div class="item">
+          <p>Loan_Amount:</p>
+          <input type="text"  name="loan_amount" id="loan_amount" placeholder="loan amount" step=0.01 required/>
+        </div>
+    
+        <div class="item">
+          <p>Term</p>
+          <div class="terms">
+            <select name="terms" id="terms" required>
+              <option value="Select a value" selected>Select a value</option>
+              <option value="36months" >36 months</option>
+              <option value="64months">60 months</option>
+              
+            </select>
+          </div>
+        </div>
+	
+        	<div class="item">
+          <p>Interest_rate</p>
+          <input type="text"  name="Interest_Number" id="Interest_Number" placeholder="Rate of interest" step=0.01 required/>
+        </div>
+    <div class="item">
+          <p>DTI</p>
+          <input type="text"  name="dti" id="dti" placeholder="Dept to income" step=0.01 required/>
+        </div>
+    
+    
+        <hr>
+        <div class="btn-block">
+          <button type="submit">Submit</button>
+        </div>
+        {%endblock%}
+      </form>
+ 
+    </div>
+  </body>
+</html>

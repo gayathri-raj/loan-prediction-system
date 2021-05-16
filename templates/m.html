@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>About page </title>
+    
+    {%extends "layout2.html" %}
+    {%block content%}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <style>
+        .jumbotron {  background-color:  #e6f2ff;}
+        .container{ background-color:  #e6f2ff;}
+        .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+        </style>
+    
+  </head>
+  <body style="background-color:   #ccf2ff  ;">
+    <div class="container">
+           <div class="jumbotron"  >
+        <h1 class="text-muted" style="font-size: 40px;" >Welcome back!</h1>
+<br>
+        <p class="text-info" style="font-size: 20px; text-align: justify; text-justify: inter-word;">You are logged in as manager.</p>
+            <hr class="my-4">
+            <br>
+            <br>
+            <img src="{{ url_for('static',filename='img/m.png') }} " alt="Girl in a jacket" class="center"></img>
+
+      <br>
+      <br>
+      <br>
+      <form action=# method="POST">
+
+
+          <ul>    
+       <li> <p class="text-info" style="font-size: 20px;  text-align: justify; text-justify: inter-word;">Click here to view visualisation of the dataset -> <a href="{{url_for('report')}}"> VISUALISATION OF DATA</a>  </p></li>
+
+  
+    
+        <li>  <p class="text-info"  style="font-size: 20px; text-align: justify; text-justify: inter-word;">Click here to know features of this project -> <a href="{{url_for('f2')}}">FEATURES</a></p></li>
+      
+      
+          <li> <p class="text-info"  style="font-size: 20px; text-align: justify; text-justify: inter-word;">Type here the secret key to access database of the project -> <input type="password" name="s" placeholder="secret key" required></p></li>
+                    </form>
+
+      </ul>
+
+       
+    </div>
+ 
+</div>
+
+
+        {%endblock%}
+     
+    
+  </body>
+</html>

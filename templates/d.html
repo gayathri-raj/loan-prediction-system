@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>About page </title>
+    
+    {%extends "layout2.html" %}
+    {%block content%}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <style>
+        .jumbotron {  background-color:  #e6f2ff;}
+        .container{ background-color:  #e6f2ff;}
+        .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+        </style>
+    
+  </head>
+  <body style="background-color:   #ccf2ff  ;">
+    <div class="container">
+           <div class="jumbotron"  >
+        <h1 class="text-muted" style="font-size: 30px;" >Database entries</h1>
+<br>
+
+    
+            {%for i in l%}
+
+          <ul>
+            
+            
+            <li> <p class="text-info" style="font-size: 20px;"> <i> {{i}}</p></li> </i></p></li>
+               
+        </ul>
+
+
+       {%endfor%}
+    </div>
+ 
+</div>
+
+
+        {%endblock%}
+     
+    
+  </body>
+</html>

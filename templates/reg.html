@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login Form</title>
+    
+    {%extends "layout.html" %}
+    {%block content%}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/master1.css') }}">
+  </head>
+  <body>
+
+    <div class="login-box">
+      <img src="{{ url_for('static',filename='img/logo2.png') }}" class="avatar" >
+      <h1>Register Here</h1>
+      <form action="#" method="POST">
+        
+        <!-- USERNAME INPUT -->
+        Email
+        <input type="text" placeholder="Enter your mail id" name="nmm" required>
+        <!-- PASSWORD INPUT -->
+        Password
+        <input type="password" placeholder="Enter Password" name="pss" required>
+        Confirm Password
+        <input type="password" placeholder="Confirm Password" name="cpss" required>
+
+    
+        <div class="clearfix">
+          <button type="reset" class="cancelbtn">Cancel</button>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      
+      </form>
+      
+      {%endblock%}
+    </div>
+  </body>
+</html>
