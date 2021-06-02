@@ -119,7 +119,7 @@ def webb2():
 def logout():
     session.pop("user",None)
     return redirect(url_for("user", usr=user))
-with open('model/xgboost_algo.pkl', 'rb') as f:
+with open('model/last.pkl', 'rb') as f:
     model = pickle.load(f)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
