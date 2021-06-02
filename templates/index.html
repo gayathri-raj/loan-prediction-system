@@ -1,95 +1,208 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>ONLINE FORM FOR LOAN PREDICTION</title>
-    {%extends "layout1.html" %}
-    {%block content%}
+html, body {
+    min-height: 100%;
+  }
+  body { 
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 14px;
+    background-color: #F0F8FF;
+   
+   /*#F0F8FF*/
+    /*background-image: url("loan1.jpg"); */
+    line-height: 22px;
+  } 
+   form, input, select, textarea, p{ 
+    padding: 0;
     
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="screen">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <div class="testbox">
-      <form action="/result" method="POST">
-        <div class="banner">
-          <h1 style="color: dimgrey ;font-size: 30px;" >ONLINE FORM FOR LOAN PREDICTION</h1>
-        </div>
-        <div class="item">
-          <p>Name</p>
-          <div class="name-item">
-            <input type="text" name="First" placeholder="First Name" required/>
-            <input type="text" name="Last" placeholder="Last Name" required />
-          </div>
-           </div>
-        	<div class="item">
-          <p>Email:</p>
-          <input type="text" min="0" name="email" id="email"placeholder="mail id" required/>
-        </div>
-	<div class="item">
-          <p>Phone Number</p>
-          <input type="number" min="0" name="conact number" placeholder="contact number" required/>
-        </div>
-	<div class="item">
-          <p>Address:</p>
-          <input type="text"  name="local Address" placeholder="local Address" required/>
-        </div>
-        
-	<div class="item">
-          <p>Employment</p>
-          <input type="number"  name="emp" id="emp" placeholder="Employment in years" step=0.01 required/>
-        </div>
-	 <div class="item">
-          <p>Home_Ownership</p>
-          <div class="Ownership_Cat">
-            <select name="home" id="home" required>
-              <option value="select a value" selected>Select a value</option>
-              <option value="MORTGAGE" >MORTGAGE</option>
-              <option value="RENT">RENT</option>
-              <option value="OWN">OWN</option>
-            </select>
-          </div>
-        </div>
-	 
-<div class="item">
-          <p>Annual_Income:</p>
-          <input type="text"  name="Annual_Income" id="Annual_Income" placeholder="Annual income" step=0.01 required/>
-        </div>
-    <div class="item">
-          <p>Loan_Amount:</p>
-          <input type="text"  name="loan_amount" id="loan_amount" placeholder="loan amount" step=0.01 required/>
-        </div>
-    
-        <div class="item">
-          <p>Term</p>
-          <div class="terms">
-            <select name="terms" id="terms" required>
-              <option value="Select a value" selected>Select a value</option>
-              <option value="36months" >36 months</option>
-              <option value="64months">60 months</option>
-              
-            </select>
-          </div>
-        </div>
-	
-        	<div class="item">
-          <p>Interest_rate</p>
-          <input type="text"  name="Interest_Number" id="Interest_Number" placeholder="Rate of interest" step=0.01 required/>
-        </div>
-    <div class="item">
-          <p>DTI</p>
-          <input type="text"  name="dti" id="dti" placeholder="Dept to income" step=0.01 required/>
-        </div>
-    
-    
-        <hr>
-        <div class="btn-block">
-          <button type="submit">Submit</button>
-        </div>
-        {%endblock%}
-      </form>
- 
-    </div>
-  </body>
-</html>
+    margin: 0;
+    outline: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: black;
+    background-color:   #ccd9ff  ;
+    line-height: 22px;
+  } 
+  
+  /*body, div, form, input, select, textarea, p {
+    margin: 0;
+    padding: 0;
+    background: url(../img/bg.jpeg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+  }*/
+  
+  h1 {
+    position: static;
+    margin: 0;
+    font-size: 40px;
+    line-height:38px;
+    color: #fff;
+    z-index: 2;
+  }
+  .testbox {
+    width: 75%;
+    height: 200px;
+    color: #fff;
+    top: 10%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    margin-top: 50px;
+    padding: 130px 80px;
+  }
+  
+  form {
+    width: 100%;
+    /* padding-top: 100px; */
+    padding: 20px;
+    border-radius: 6px;
+    background:  #ccd9ff  ;
+    box-shadow: 0 0 30px 0 #E6E6FA; 
+  }
+  .banner {
+    position: relative;
+    height: 130px;
+    margin:10px 15px 10px 15px;
+    /* background-image: url("bank.png"); */
+    background-size: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .banner::after {
+    content: "";
+    background-color:   #b3c6ff  ; 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  p.top-info {
+    margin: 10px 0;
+  }
+  input, select, textarea {
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+  input {
+    width: calc(100% - 10px);
+    padding: 5px;
+  }
+  select {
+    width: 100%;
+    padding: 7px 0;
+    background: transparent;
+  }
+  textarea {
+    width: calc(100% - 12px);
+    padding: 5px;
+  }
+  .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+    color: black;
+  }
+  .item input:hover, .item select:hover, .item textarea:hover {
+    border: 1px solid transparent;
+    box-shadow: 0 0 8px 0 #E6E6FA ; 
+    color: black;
+  }
+  .item {
+    position: relative;
+    margin:15px 15px 10px 15px;
+  }
+  .question {
+    position: relative;
+    margin:10px 15px 10px 15px;
+  }
+  
+  input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  .item i, input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    font-size: 20px;
+    color: black;
+  }
+  .item i {
+    right: 2%;
+    top: 30px;
+    z-index: 1;
+  }
+  [type="date"]::-webkit-calendar-picker-indicator {
+    right: 1%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+  }
+  input[type=radio] {
+    width: 0;
+    visibility: hidden;
+  }
+  label.radio {
+    position: relative;
+    display: inline-block;
+    margin: 5px 20px 25px 0;
+    cursor: pointer;
+  }
+  .question span {
+    margin-left: 30px;
+  }
+  label.radio:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+  label.radio:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    top: 6px;
+    left: 5px;
+    background: transparent;
+    border: 3px solid black;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+  input[type=radio]:checked + label:after {
+    opacity: 1;
+  }
+  .btn-block {
+    margin-top: 10px;
+    text-align: center;
+  }
+  button {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px; 
+    background:       #99ccff  ;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #99ccff;
+  }
+  @media (min-width: 568px) {
+  .name-item, .city-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .name-item input, .city-item input {
+    width: calc(50% - 20px);
+  }
+  .city-item select {
+    width: calc(50% - 8px);
+  }
+  }
