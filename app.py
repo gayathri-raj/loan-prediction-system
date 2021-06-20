@@ -150,9 +150,9 @@ def result():
         terms=60    
     interest_rate1 = float(request.form['Interest_Number'])
     dti=float(request.form['dti'])
-    if ((annual_inc==0 ) or (loan_amnt==0) or (interest_rate1==0) or (dti==0)):
-        r=1 
-        return render_template("index.html",r=r)
+#     if ((annual_inc==0 ) or (loan_amnt==0) or (interest_rate1==0) or (dti==0)):
+#         r=1 
+#         return render_template("index.html",r=r)
     interest_rate = interest_rate1/1200
     if terms==36:          
         installment = (loan_amnt *interest_rate*((1+interest_rate)**36)) / (((1+interest_rate)**36) - 1)
@@ -180,4 +180,5 @@ def result():
     return render_template("result.html",success=success)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.debug = True
+    app.run()
